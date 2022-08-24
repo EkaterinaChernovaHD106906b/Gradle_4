@@ -30,6 +30,10 @@ public class DataGenerator {
         return name;
     }
 
+    public static String generateDate(int days) {
+        return LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+    }
+
 
     public static String generatePhone(String locale) {
         Faker faker = new Faker(new Locale("ru"));
